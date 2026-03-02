@@ -202,18 +202,20 @@ body {
 
 .stamp {
   position: absolute;
-  top: 1.5rem;
-  right: -0.5rem;
+  top: 30%;
+  left: 50%;
   font-family: var(--font-head);
   font-size: 1.4rem;
   letter-spacing: 0.15em;
   color: var(--accent);
   border: 3px solid var(--accent);
   padding: 0.15rem 0.5rem;
-  transform: rotate(15deg);
+
+  transform: translate(-50%, -50%) rotate(-15deg);
   opacity: 0.55;
   pointer-events: none;
   text-transform: uppercase;
+
 }
 
 /* ---- CARDS ---- */
@@ -532,4 +534,32 @@ body {
   .polaroid { max-width: 100%; }
   .links-grid { grid-template-columns: 1fr; }
   .reddit-post-link { flex-wrap: wrap; }
+}
+
+/* Language switch container */
+.lang-switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 20;
+}
+
+/* Flag link */
+.lang-flag {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Flag image styling */
+.lang-flag img {
+  width: 36px;         /* same width for both */
+  height: auto;        /* preserves ratio */
+  display: block;
+  border-radius: 3px;  /* subtle rounding */
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.lang-flag img:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
 }
